@@ -31,7 +31,7 @@
   }
 </style>
 
-<h1>基础布局</h1>
+<h1>Basic layout</h1>
 <SeuRow>
   <SeuCol span="24">
     <div class="grid-content bg-purple-dark" />
@@ -88,5 +88,21 @@
   </SeuCol>
   <SeuCol span="4">
     <div class="grid-content bg-purple-light" />
+  </SeuCol>
+</SeuRow>
+
+<h1>Column spacing</h1>
+<SeuRow gutter="20">
+  <SeuCol span="6">
+    <div class="grid-content bg-purple" />
+  </SeuCol>
+  <SeuCol span="6">
+    <div class="grid-content bg-purple" />
+  </SeuCol>
+  <SeuCol span="6">
+    <div class="grid-content bg-purple" />
+  </SeuCol>
+  <SeuCol span="6">
+    <div class="grid-content bg-purple" />
   </SeuCol>
 </SeuRow>
