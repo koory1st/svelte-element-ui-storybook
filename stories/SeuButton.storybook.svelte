@@ -6,9 +6,7 @@
 </script>
 
 <style>
-  :global(.seu-row) {
-    margin-bottom: 20px;
-  }
+
 </style>
 
 <SeuRow>
