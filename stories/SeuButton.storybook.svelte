@@ -3,12 +3,23 @@
     SeuRow,
     SeuButton,
   } from '/Users/koory1st/dev/01_webdev/svelte/svelte-element-ui/dist/index.js';
+  console.log('props', $$props);
+  let { type } = { ...$$props };
+
+  function clickHandler() {
+    console.log(123);
+  }
 </script>
 
 <style>
-
+  :global(.seu-row) {
+    margin-bottom: 20px;
+  }
 </style>
 
+<SeuRow>
+  <SeuButton {type}>默认按钮</SeuButton>
+</SeuRow>
 <SeuRow>
   <SeuButton>默认按钮</SeuButton>
   <SeuButton type="primary">主要按钮</SeuButton>
@@ -43,4 +54,42 @@
   <SeuButton type="info" icon="seu-icon-message" circle />
   <SeuButton type="warning" icon="seu-icon-star-off" circle />
   <SeuButton type="danger" icon="seu-icon-delete" circle />
+</SeuRow>
+
+<SeuRow>
+  <SeuButton disabled>默认按钮</SeuButton>
+  <SeuButton type="primary" disabled>主要按钮</SeuButton>
+  <SeuButton type="success" disabled>成功按钮</SeuButton>
+  <SeuButton type="info" disabled>信息按钮</SeuButton>
+  <SeuButton type="warning" disabled>警告按钮</SeuButton>
+  <SeuButton type="danger" disabled>危险按钮</SeuButton>
+</SeuRow>
+
+<SeuRow>
+  <SeuButton plain disabled>朴素按钮</SeuButton>
+  <SeuButton type="primary" plain disabled>主要按钮</SeuButton>
+  <SeuButton type="success" plain disabled>成功按钮</SeuButton>
+  <SeuButton type="info" plain disabled>信息按钮</SeuButton>
+  <SeuButton type="warning" plain disabled>警告按钮</SeuButton>
+  <SeuButton type="danger" plain disabled>危险按钮</SeuButton>
+</SeuRow>
+
+<SeuButton type="text">文字按钮</SeuButton>
+<SeuButton type="text" disabled>文字按钮</SeuButton>
+
+<SeuRow>
+  <SeuButton type="primary" loading={true}>加载中</SeuButton>
+</SeuRow>
+
+<SeuRow>
+  <SeuButton>默认按钮</SeuButton>
+  <SeuButton size="medium">中等按钮</SeuButton>
+  <SeuButton size="small">小型按钮</SeuButton>
+  <SeuButton size="mini">超小按钮</SeuButton>
+</SeuRow>
+<SeuRow>
+  <SeuButton round>默认按钮</SeuButton>
+  <SeuButton size="medium" round>中等按钮</SeuButton>
+  <SeuButton size="small" round>小型按钮</SeuButton>
+  <SeuButton size="mini" round on:click={clickHandler}>超小按钮</SeuButton>
 </SeuRow>
